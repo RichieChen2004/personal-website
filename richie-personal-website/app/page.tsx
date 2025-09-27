@@ -1,26 +1,22 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/NavBar/Navbar";
 import MusicPlayer from "../components/MusicPlayer/MusicPlayer";
+import LandingCollage from "../components/LandingCollage/LandingCollage";
+
+import { useState } from "react";
 
 export default function Home() {
+
+  const [loaded, setLoaded] = useState(false);
+  
   return (
     <main className="flex flex-col items-center justify-start min-h-screen">
       
       <Navbar />
       <MusicPlayer />
-      
-      <div className="flex items-center justify-center w-full h-screen relative" style={{ backgroundColor: '#171719' }}>
-        <Image
-          src="/omni2.jpg"
-          alt="Frieren"
-          height = {1308}
-          width= {736}
-          style={{ objectFit: "cover" }}
-        />
-      </div>
+      <LandingCollage />
 
       {/* Stuff */}
       <h1 className="text-4xl font-bold">Hello, World! 👋</h1>
