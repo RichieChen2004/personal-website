@@ -1,0 +1,124 @@
+.music_player {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    width: 60px;
+    height: 55px;
+    background-color: rgba(204, 204, 204, 0.2);
+    z-index: 50;
+    border-radius: 12px;
+    outline: 1px solid hsla(0, 0%, 100%, 0.25);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+    transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.song_info {
+    position: fixed;
+    bottom: 28px;
+    left: 160px;
+    color: #ffffff;
+    z-index: 51;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    pointer-events: none; 
+    opacity: 0;
+}
+
+.song_artist {
+    font-size: 11px;
+    color: #858585;
+}
+
+.song_info.visible {
+    opacity: 1;
+    transition: opacity 0.5s ease-in 0.2s; 
+    pointer-events: auto;
+}
+
+.music_icon {
+    position: fixed;
+    bottom: 24px;
+    left: 32px;
+    object-fit: cover;
+    z-index: 51;
+    transition: transform 0.3s ease-in-out;
+}
+
+.music_icon.expanded {
+  transform: scale(1.1) translateY(-3px);
+}
+
+.music_expand {
+    position: fixed;
+    bottom: 65px;
+    left: 165px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(204, 204, 204, 0.2);
+    z-index: 51;
+    outline: 2px solid rgba(223, 221, 221, 0.527);
+    font-weight: 300;
+    font-size: 32px;
+    font-family: inherit;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    cursor: pointer;
+}
+
+.music_expand:hover {
+    transform: scale(1.10);
+}
+
+.expand_button {
+    cursor: pointer;
+}
+
+.music_controls {
+    position: fixed; 
+    bottom: 36px;    
+    left: 345px;       
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    pointer-events: none;
+    z-index: 51;
+}
+
+.music_controls.visible {
+    opacity: 1;
+    transition: opacity 0.5s ease-in 0.2s; 
+    pointer-events: auto;
+}
+
+.music_play_button, 
+.music_forward_button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music_backward_button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+}
+
+.music_play_button:hover,
+.music_forward_button:hover,
+.music_backward_button:hover {
+    transform: scale(1.1);
+}
+
