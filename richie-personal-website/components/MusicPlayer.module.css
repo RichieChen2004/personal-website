@@ -117,8 +117,11 @@
 }
 
 .music_play_button:hover,
-.music_forward_button:hover,
-.music_backward_button:hover {
+.music_forward_button:hover {
     transform: scale(1.1);
+}
+
+.music_backward_button:hover {
+    transform: scale(1.1) rotate(180deg)
 }
 
