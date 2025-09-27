@@ -12,33 +12,27 @@ export default function Home() {
   const [loaded, setLoaded] = useState(false);
   
   return (
-    <main className="flex flex-col items-center justify-start min-h-screen">
+    <main className="flex flex-col items-center justify-start min-h-screen bg-[#171719]">
       
-      <Navbar />
+      {/* <Navbar /> */}
       <MusicPlayer />
       <LandingCollage />
 
-      {/* Stuff */}
-      <h1 className="text-4xl font-bold">Hello, World! 👋</h1>
 
-      <Link
-        href="/test"
-        className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px] bg-white text-black"
-      >
-        Go to Test Page
-      </Link>
-      <Link
-        href="/test"
-        className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px] bg-white text-black"
-      >
-        Go to Test Page
-      </Link>
-      <Link
-        href="/test"
-        className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px] bg-white text-black"
-      >
-        Go to Test Page
-      </Link>
+      {/* Stuff */}
+      <div className="w-full h-screen flex flex-col items-center justify-between px-8 py-4 text-white shadow z-0" >
+
+        <h1 className="text-4xl font-bold"></h1>
+        <h1 className="text-4xl font-bold"></h1>
+        <h1 className="text-4xl font-bold"></h1>
+        <h1 className="text-4xl font-bold"></h1>
+        <h1 className="text-4xl font-bold"></h1>
+        <h1 className="text-4xl font-bold"></h1>
+        <h1 className="text-4xl font-bold"></h1>
+        <h1 className="text-4xl font-bold"></h1>
+      </div>
+
+      
     </main>
   );
 }
