@@ -41,7 +41,7 @@
 
 .music_icon {
     position: fixed;
-    bottom: 24px;
+    bottom: 23px;
     left: 32px;
     object-fit: cover;
     z-index: 51;
@@ -49,10 +49,10 @@
 }
 
 .music_icon.expanded {
-  transform: scale(1.1) translateY(-3px);
+  transform: scale(1.2) translateY(-7px);
 }
 
-.music_expand {
+.music_player_expand {
     position: fixed;
     bottom: 65px;
     left: 165px;
@@ -74,7 +74,7 @@
     cursor: pointer;
 }
 
-.music_expand:hover {
+.music_player_expand:hover {
     transform: scale(1.10);
 }
 

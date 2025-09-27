@@ -3,22 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
-import MusicPlayer from "../components/MusicPlayer";
+import MusicPlayer from "../components/MusicPlayer/MusicPlayer";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-start min-h-screen">
       
       <Navbar />
-      
       <MusicPlayer />
-      {/* Hook Image */}
       
       <div className="flex items-center justify-center w-full h-screen relative" style={{ backgroundColor: '#171719' }}>
         <Image
           src="/omni2.jpg"
           alt="Frieren"
-          // fill
           height = {1308}
           width= {736}
           style={{ objectFit: "cover" }}
