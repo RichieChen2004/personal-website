@@ -75,11 +75,20 @@
 }
 
 .music_player_expand:hover {
-    transform: scale(1.10);
+  transform: scale(1.1);
 }
 
-.expand_button {
-    cursor: pointer;
+.music_player_expand.transitioning {
+  pointer-events: none;
+  cursor: default;
+}
+
+.music_player_expand.expanded {
+    transform: translateX(290px);
+}
+
+.music_player_expand.expanded:hover {
+    transform: translateX(290px) scale(1.1);
 }
 
 .music_controls {

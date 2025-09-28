@@ -13,6 +13,7 @@ export default function MusicPlayer() {
   const [volume, _] = useState(0.1);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     if (audioRef.current) {
@@ -21,8 +22,10 @@ export default function MusicPlayer() {
   }, [volume]);
 
   const toggleExpand = () => {
+    setIsTransitioning(true);
     setIsExpanded(!isExpanded);
-  }
+    setTimeout(() => setIsTransitioning(false), 400);
+  };
 
   const togglePlay = () => {
     setIsPlaying(!isPlaying);
@@ -55,21 +58,17 @@ export default function MusicPlayer() {
         </div>
         
         {/* Expand Button */}
-        <div
-          className={styles.music_player_expand}
-          style={{ transform: isExpanded ? "translateX(290px)" : "translateX(0px)" }}
+        <button
+          onClick={toggleExpand} 
+          className={`${styles.music_player_expand} ${isExpanded ? styles.expanded : ""} ${isTransitioning ? styles.transitioning : ""}`}
+          // {/* style={{ transform: isExpanded ? "translateX(290px)" : "translateX(0px)" }} */}
+          aria-label={isExpanded ? "Collapse Music Player" : "Expand Music Player"}
         >
-            <button 
-                onClick={toggleExpand} 
-                className={styles.expand_button} 
-                aria-label={isExpanded ? "Collapse Music Player" : "Expand Music Player"}
-            >
-                <svg width="22" height="22" viewBox="0 0 32 32">
-                    {isExpanded ? null : (<line x1="16" y1="6" x2="16" y2="26" stroke="currentColor" strokeWidth="3"/>)}
-                    <line x1="6" y1="16" x2="26" y2="16" stroke="currentColor" strokeWidth="3"/>
-                </svg>
-            </button>
-        </div>
+          <svg width="22" height="22" viewBox="0 0 32 32">
+            {isExpanded ? null : (<line x1="16" y1="6" x2="16" y2="26" stroke="currentColor" strokeWidth="3"/>)}
+            <line x1="6" y1="16" x2="26" y2="16" stroke="currentColor" strokeWidth="3"/>
+          </svg>
+        </button>
 
       <audio ref={audioRef} src="/music/outsider.mp3" />
 
