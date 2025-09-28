@@ -1,11 +1,19 @@
 import Link from "next/link";
 import styles from "./Navbar.module.css";
-import Image from "next/image";
+import { Aldrich } from 'next/font/google';
+
+const aldrich = Aldrich({ subsets: ['latin'], weight: '400' });
+
 
 export default function Navbar() {
+
   return (
-    <nav className="flex flex-col items-center p-4 border-b border-gray-200 position-fixed z-50">
-      
+    <nav className={`${styles['navbar']} ${styles['fly-in-top']} flex justify-center`}>
+      <div className={`${styles['navbar_directory']} ${aldrich.className}`}>
+        <Link href="/#about">About</Link>
+        <a href="/" className={aldrich.className}>Home</a>
+        <Link href="/#work">Work</Link>
+      </div>
     </nav>
   );
 }

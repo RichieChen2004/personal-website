@@ -40,7 +40,7 @@ export default function MusicPlayer() {
         {/* Core Music Player Look*/}
         <Image src="/bochi.webp" alt="bochi" className={`${styles.music_icon} ${isExpanded ? styles.expanded : ""}`} width={80} height={80} />
         <AudioVisualiser isPlaying={isPlaying} />
-        <div className={styles.music_player} style={{ width: isExpanded ? 450 : 160 }}></div>
+        <div className={`${styles.music_player}`} style={{ width: isExpanded ? 450 : 160 }}></div>
 
         {/* Song Info */}
         <div className={`${styles.song_info} ${aldrich.className} ${isExpanded ? styles.visible : ""}`}>
@@ -61,7 +61,6 @@ export default function MusicPlayer() {
         <button
           onClick={toggleExpand} 
           className={`${styles.music_player_expand} ${isExpanded ? styles.expanded : ""} ${isTransitioning ? styles.transitioning : ""}`}
-          // {/* style={{ transform: isExpanded ? "translateX(290px)" : "translateX(0px)" }} */}
           aria-label={isExpanded ? "Collapse Music Player" : "Expand Music Player"}
         >
           <svg width="22" height="22" viewBox="0 0 32 32">
