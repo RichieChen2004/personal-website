@@ -9,6 +9,8 @@ import FadeInSection from "../components/FadeInSection/FadeInSection";
 
 import { useState } from "react";
 import { Aldrich } from 'next/font/google';
+import Footer from "@/components/Footer/Footer";
+import ConnectContainer from "@/components/ConnectContainer/ConnectContainer";
 
 const aldrich = Aldrich({ subsets: ['latin'], weight: '400' });
 
@@ -37,8 +39,9 @@ export default function Home() {
             and an incoming <span className="bg-[#fcbe11] text-black px-1 rounded">software engineer intern</span> at google .
           </p>
           <p className="text-lg max-w-3xl mb-4">
-            i love reading manga and manwha, specifically{" "}
-            <Link href="/#orv" className="text-[#808080] underline">omniscient reader's viewpoint</Link>.
+            i love reading manga and manwha, specifically {" "}
+            <Link href="/#orv" className="text-[#808080] underline">omniscient reader's viewpoint</Link>
+            {" "} .
           </p>
         </FadeInSection>
         </div>
@@ -52,7 +55,7 @@ export default function Home() {
           <p className="text-lg max-w-3xl mb-4">currently improving my front-end skills .</p>
           <p className="text-lg max-w-3xl mb-4">experienced in <span className="bg-[#fcbe11] text-black px-1 rounded">full-stack development</span> .</p>
           <p className="text-lg max-w-3xl mb-4">
-            previously interned as a <span className="bg-[#fcbe11] text-black px-1 rounded">data engineer & software engineer</span> at{" "}
+            previously interned as a <span className="bg-[#fcbe11] text-black px-1 rounded">data engineer & software engineer</span> at {" "}
             <Link 
               href="https://www.linkedin.com/company/reecetech/?originalSubdomain=au" 
               className="text-[#808080] underline" 
@@ -65,12 +68,29 @@ export default function Home() {
           </p>
 
           <p className="text-lg max-w-3xl mb-4">
-            here's my resume .
+            here's my {" "}
+            <Link
+              href="/richie_resume.pdf" 
+              className="text-[#808080] underline" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              resume
+            </Link> 
+            {" "} .
           </p>
         </FadeInSection>
         </div>
       </div>
+
+      {/* Connect Section */}
+      <div id="connect" className={`${styles.info_section} ${aldrich.className}`}>
+        <FadeInSection>
+          <ConnectContainer />
+        </FadeInSection>
+      </div>
       
+      <Footer />
     </main>
   );
 }
