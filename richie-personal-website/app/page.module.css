@@ -1,6 +1,15 @@
-.about_section {
-  padding: 10px;
-  max-width: 800px;
-  margin: auto;
+.info_section {
+  width: 100%;          
+  min-height: 100vh;    
+  padding: 4rem 2rem;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #171719;
   color: var(--foreground);
+}
+
+.info_content {
+  width: 100%;
+  max-width: 800px;
 }

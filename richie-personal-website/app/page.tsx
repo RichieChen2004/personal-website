@@ -24,49 +24,52 @@ export default function Home() {
       <LandingCollage />
 
 
-      {/* Stuff */}
-      <div className="w-full h-screen flex flex-col items-center justify-between px-8 py-4 text-white shadow z-0" >
-
-        
-          <div id="about" className={`${styles.about_section} ${aldrich.className}`}>
-            <FadeInSection> 
-              <h2 className="text-4xl font-bold mb-6">about.</h2>
-              <p className="text-lg max-w-3xl mb-4">
-                hi there, i'm richie chen .
-              </p>
-              <p className="text-lg max-w-3xl mb-4">
-                i'm an <span className="bg-[#fcbe11] text-black px-1 rounded">advanced computer science</span> student at monash university ,
-              </p>
-
-              <div className="flex flex-row items-center space-x-1">
-                <p className="text-lg max-w-3xl mb-4">
-                  and an incoming <span className="bg-[#fcbe11] text-black px-1 rounded">software engineer intern</span> at google .
-                </p>
-              </div>
-
-              <div className="flex flex-row items-center space-x-1">
-                <p className="text-lg max-w-3xl mb-4">
-                  i love reading manga and manwha, specifically
-                </p>
-                <Link href="/#orv" className="text-lg max-w-3xl mb-4 text-[#808080] underline">omniscient reader's viewpoint</Link>
-                <p className="text-lg max-w-3xl mb-4">
-                  .
-                </p>
-              </div>
-              </FadeInSection>
-          </div>
-
-
-        <h1 className="text-4xl font-bold"></h1>
-        <h1 className="text-4xl font-bold"></h1>
-        <h1 className="text-4xl font-bold"></h1>
-        <h1 className="text-4xl font-bold"></h1>
-        <h1 className="text-4xl font-bold"></h1>
-        <h1 className="text-4xl font-bold"></h1>
-        <h1 className="text-4xl font-bold"></h1>
-        <h1 className="text-4xl font-bold"></h1>
+      {/* About Section */}
+      <div id="about" className={`${styles.info_section} ${aldrich.className}`}>
+        <div className={styles.info_content}>
+        <FadeInSection> 
+          <h2 className="text-4xl font-bold mb-6">about.</h2>
+          <p className="text-lg max-w-3xl mb-4">hi there, i'm richie chen .</p>
+          <p className="text-lg max-w-3xl mb-4">
+            i'm an <span className="bg-[#fcbe11] text-black px-1 rounded">advanced computer science</span> student at monash university ,
+          </p>
+          <p className="text-lg max-w-3xl mb-4">
+            and an incoming <span className="bg-[#fcbe11] text-black px-1 rounded">software engineer intern</span> at google .
+          </p>
+          <p className="text-lg max-w-3xl mb-4">
+            i love reading manga and manwha, specifically{" "}
+            <Link href="/#orv" className="text-[#808080] underline">omniscient reader's viewpoint</Link>.
+          </p>
+        </FadeInSection>
+        </div>
       </div>
 
+      {/* Work Section */}
+      <div id="work" className={`${styles.info_section} ${aldrich.className}`}>
+        <div className={styles.info_content}>
+        <FadeInSection> 
+          <h2 className="text-4xl font-bold mb-6">work.</h2>
+          <p className="text-lg max-w-3xl mb-4">currently improving my front-end skills .</p>
+          <p className="text-lg max-w-3xl mb-4">experienced in <span className="bg-[#fcbe11] text-black px-1 rounded">full-stack development</span> .</p>
+          <p className="text-lg max-w-3xl mb-4">
+            previously interned as a <span className="bg-[#fcbe11] text-black px-1 rounded">data engineer & software engineer</span> at{" "}
+            <Link 
+              href="https://www.linkedin.com/company/reecetech/?originalSubdomain=au" 
+              className="text-[#808080] underline" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              reecetech
+            </Link>
+            {" "} .
+          </p>
+
+          <p className="text-lg max-w-3xl mb-4">
+            here's my resume .
+          </p>
+        </FadeInSection>
+        </div>
+      </div>
       
     </main>
   );
