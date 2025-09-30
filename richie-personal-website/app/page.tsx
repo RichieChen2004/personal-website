@@ -52,7 +52,7 @@ export default function Home() {
         <div className={styles.info_content}>
         <FadeInSection> 
           <h2 className="text-4xl font-bold mb-6">work.</h2>
-          <p className="text-lg max-w-3xl mb-4">currently improving my front-end skills .</p>
+          <p className="text-lg max-w-3xl mb-4">currently improving my front-end skills , back-end is my favourite child .</p>
           <p className="text-lg max-w-3xl mb-4">experienced in <span className="bg-[#fcbe11] text-black px-1 rounded">full-stack development</span> .</p>
           <p className="text-lg max-w-3xl mb-4">
             previously interned as a <span className="bg-[#fcbe11] text-black px-1 rounded">data engineer & software engineer</span> at {" "}

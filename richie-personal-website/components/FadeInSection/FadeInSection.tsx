@@ -9,10 +9,7 @@ export default function FadeInSection({ children }: { children: React.ReactNode 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(entry.target); // fade in only once
-          }
+          setIsVisible(entry.isIntersecting);
         });
       },
       { threshold: 0.1 }
@@ -28,7 +25,7 @@ export default function FadeInSection({ children }: { children: React.ReactNode 
     <div
       ref={ref}
       className={`transform transition-all duration-1000 ease-in-out ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-30"
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
       {children}

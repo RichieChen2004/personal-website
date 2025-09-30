@@ -9,10 +9,16 @@ export default function ConnectContainer() {
           Let's connect!
         </div>
         <div className={styles.back}>
-            <Image src="/svg/linkedin.svg" alt="linkedin" width={24} height={24} />
-            <div className="flex flex-col ml-2">
-                <a href="https://www.linkedin.com/in/richie-chen-9b4b621b4/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="mailto:richiechen2004@gmail.com">Email</a>
+            <div className="flex space-x-4">
+                <a href="https://www.linkedin.com/in/richie-chen-133451359/" target="_blank" rel="noopener noreferrer">
+                  <Image src="/svg/linkedin.svg" alt="linkedin" width={24} height={24} />
+                </a>
+                <a href="mailto:richiechen2004@gmail.com">
+                  <Image src="/svg/mail.svg" alt="mail" width={24} height={24} />
+                </a>
+                <a href="https://github.com/RichieChen2004" target="_blank" rel="noopener noreferrer">
+                  <Image src="/svg/github.svg" alt="mail" width={24} height={24} />
+                </a>
             </div>
         </div>
       </div>

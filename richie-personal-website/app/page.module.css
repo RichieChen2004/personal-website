@@ -13,3 +13,13 @@
   width: 100%;
   max-width: 800px;
 }
+
+.icon_expand {
+  display: inline-flex;       
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+.icon_expand:hover {
+  transform: scale(1.1);
+}
