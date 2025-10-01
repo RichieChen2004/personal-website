@@ -30,6 +30,7 @@ export default function MusicPlayer() {
     }
   }, [volume]);
 
+  // Keep songs playing if playing
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -38,6 +39,17 @@ export default function MusicPlayer() {
       audio.play();
     }
   }, [currentSongIndex, isPlaying]);
+
+  // Autoplay when song ends
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const handleEnded = () => skipSong(-1);
+
+    audio.addEventListener('ended', handleEnded);
+    return () => audio.removeEventListener('ended', handleEnded);
+  }, [currentSongIndex]);
 
   const toggleExpand = () => {
     setIsTransitioning(true);
