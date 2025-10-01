@@ -14,12 +14,30 @@ export default function MusicPlayer() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+
+  const playlist = [
+    { title: "Outsider", artist: "Eve", src: "/music/outsider.mp3" },
+    { title: "Guitar, Loneliness a...", artist: "kessoku band", src: "/music/bochi.mp3" },
+    { title: "Lost Umbrella", artist: "inabakumori", src: "/music/lost_umbrella.mp3" },
+    { title: "Usseewa!", artist: "Ado", src: "/music/ado.mp3" },
+    { title: "シャルル／バルーン", artist: "須田景凪 バルーン", src: "/music/self_cover.mp3" },
+  ]
 
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = volume;
     }
   }, [volume]);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (isPlaying) {
+      audio.play();
+    }
+  }, [currentSongIndex, isPlaying]);
 
   const toggleExpand = () => {
     setIsTransitioning(true);
@@ -30,8 +48,15 @@ export default function MusicPlayer() {
   const togglePlay = () => {
     setIsPlaying(!isPlaying);
     if (audioRef.current) {
-        audioRef.current.paused ? audioRef.current.play() : audioRef.current.pause();
+      audioRef.current.paused ? audioRef.current.play() : audioRef.current.pause();
     }
+  }
+
+  const skipSong = (skip: number) => {
+    setCurrentSongIndex((prev) => {
+      const newIndex = (prev + skip + playlist.length) % playlist.length;
+      return newIndex;
+    });
   }
 
   return (
@@ -44,17 +69,21 @@ export default function MusicPlayer() {
 
         {/* Song Info */}
         <div className={`${styles.song_info} ${aldrich.className} ${isExpanded ? styles.visible : ""}`}>
-          <div className={styles.song_title}>Outsider</div>
-          <div className={styles.song_artist}>Eve</div>
+          <div className={styles.song_title}>
+            {playlist[currentSongIndex].title}
+          </div>
+          <div className={styles.song_artist}>
+            {playlist[currentSongIndex].artist}
+          </div>
         </div>
 
         {/* Music Controls */}
         <div className={`${styles.music_controls} ${isExpanded ? styles.visible : ""}`}>
-          <Image className={styles.music_backward_button} src="/svg/skip.svg" alt="Play" width={32} height={32} />
+          <Image onClick={() => skipSong(1)} className={styles.music_backward_button} src="/svg/skip.svg" alt="Play" width={32} height={32} />
           <button onClick={togglePlay} className={styles.music_play_button} >
               <Image src={!isPlaying ? "/svg/play.svg" : "/svg/pause.svg"} alt="Play" width={24} height={24} />
           </button>
-          <Image className={styles.music_forward_button} src="/svg/skip.svg" alt="Play" width={32} height={32} />
+          <Image onClick={() => skipSong(-1)} className={styles.music_forward_button} src="/svg/skip.svg" alt="Play" width={32} height={32} />
         </div>
         
         {/* Expand Button */}
@@ -69,7 +98,10 @@ export default function MusicPlayer() {
           </svg>
         </button>
 
-      <audio ref={audioRef} src="/music/outsider.mp3" />
+      <audio
+        ref={audioRef}
+        src={playlist[currentSongIndex].src}
+      />
 
     </div>
   );
