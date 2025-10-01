@@ -43,3 +43,11 @@
     outline: 1px solid hsla(0, 0%, 100%, 0.25);
     transform: rotateY(180deg);
 }
+
+.back img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.back img:hover {
+  transform: scale(1.1);
+}
