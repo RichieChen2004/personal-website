@@ -7,22 +7,30 @@ import LandingCollage from "../components/LandingCollage/LandingCollage";
 import styles from "./page.module.css";
 import FadeInSection from "../components/FadeInSection/FadeInSection";
 
-import { useState } from "react";
 import { Aldrich } from 'next/font/google';
 import Footer from "@/components/Footer/Footer";
 import ConnectContainer from "@/components/ConnectContainer/ConnectContainer";
+import { useIsMobile } from "@/util/useIsMobile"
+
 
 const aldrich = Aldrich({ subsets: ['latin'], weight: '400' });
 
 export default function Home() {
 
-  const [loaded, setLoaded] = useState(false);
+  const isMobile = useIsMobile()
   
   return (
     <main className="flex flex-col items-center justify-start min-h-screen bg-[#171719]">
       
-      <Navbar />
-      <MusicPlayer />
+      {
+        isMobile ? null 
+        : (
+            <>
+              <Navbar /> 
+              <MusicPlayer />
+            </>
+          )
+      }
       <LandingCollage />
 
 
@@ -53,7 +61,7 @@ export default function Home() {
         <FadeInSection> 
           <h2 className="text-4xl font-bold mb-6">work.</h2>
           <p className="text-lg max-w-3xl mb-4">currently improving my front-end skills , back-end is my favourite child .</p>
-          <p className="text-lg max-w-3xl mb-4">experienced in <span className="bg-[#fcbe11] text-black px-1 rounded">full-stack development</span> .</p>
+          <p className="text-lg max-w-3xl mb-4">experienced in <span className="bg-[#fcbe11] text-black px-1 rounded">fullstack development</span> .</p>
           <p className="text-lg max-w-3xl mb-4">
             previously interned as a <span className="bg-[#fcbe11] text-black px-1 rounded">data engineer & software engineer</span> at {" "}
             <Link 

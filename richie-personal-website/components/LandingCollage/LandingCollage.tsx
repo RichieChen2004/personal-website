@@ -1,19 +1,25 @@
 import Image from "next/image";
-
+import { useIsMobile } from "@/util/useIsMobile"
 import styles from "./LandingCollage.module.css";
 
 export default function LandingCollage() {
+
+  const width = 200;
+  const height = 450;
+
+  const isMobile = useIsMobile()
+
   return (
     <div id="orv" className="flex items-center justify-center w-full h-screen relative bg-[white] rounded-b-2xl shadow-lg">
-      <div className="relative w-1/2 max-w-lg aspect-[736/1308]">
+      <div className={`relative w-1/2 max-w-lg aspect-[736/1308] ${ isMobile ? "-translate-x-12 translate-y-13 scale-90" : ""}`}>
 
         {/* Background */}
         <div className={`${styles['origin']} -translate-x-25 -translate-y-100 ${styles['fly-in-right']}`}>
           <Image
             src="/dokja/zero.jpg"
             alt="zero"
-            width={200}
-            height={450}
+            width={width}
+            height={height}
             className={styles['hover-scale']}
           />
         </div>
@@ -22,8 +28,8 @@ export default function LandingCollage() {
           <Image
             src="/dokja/right face.jpg"
             alt="right face"
-            width={200}
-            height={120}
+            width={width}
+            height={height}
             className={styles['hover-scale']}
           />
         </div>
@@ -32,8 +38,8 @@ export default function LandingCollage() {
           <Image
             src="/dokja/shoulder.jpg"
             alt="shoulder"
-            width={200}
-            height={120}
+            width={width}
+            height={height}
             className={styles['hover-scale']}
           />
         </div>
@@ -42,8 +48,8 @@ export default function LandingCollage() {
           <Image
             src="/dokja/1863th.jpg"
             alt="1863th"
-            width={200}
-            height={120}
+            width={width}
+            height={height}
             className={styles['hover-scale']}
           />
         </div>
@@ -55,8 +61,8 @@ export default function LandingCollage() {
           <Image
             src="/dokja/eye.jpg"
             alt="eye"
-            width={200}
-            height={120}
+            width={width}
+            height={height}
             className={styles['hover-scale']}
           />
         </div>
@@ -65,8 +71,8 @@ export default function LandingCollage() {
           <Image
             src="/dokja/999.jpg"
             alt="999"
-            width={200}
-            height={120}
+            width={width}
+            height={height}
             className={styles['hover-scale']}
           />
         </div>
@@ -75,8 +81,8 @@ export default function LandingCollage() {
           <Image
             src="/dokja/3rd.jpg"
             alt="3rd"
-            width={200}
-            height={120}
+            width={width}
+            height={height}
             className={styles['hover-scale']}
           />
         </div>
@@ -85,8 +91,8 @@ export default function LandingCollage() {
           <Image
             src="/dokja/nose.jpg"
             alt="nose"
-            width={200}
-            height={120}
+            width={width}
+            height={height}
             className={styles['hover-scale']}
           />
         </div>
