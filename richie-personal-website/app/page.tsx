@@ -29,10 +29,10 @@ export default function Home() {
             <>
               <Navbar /> 
               <MusicPlayer />
+              <SideNav />
             </>
           )
       }
-      <SideNav />
       <LandingCollage />
 
 
