@@ -6,6 +6,7 @@ import MusicPlayer from "../components/MusicPlayer/MusicPlayer";
 import LandingCollage from "../components/LandingCollage/LandingCollage";
 import styles from "./page.module.css";
 import FadeInSection from "../components/FadeInSection/FadeInSection";
+import SideNav from "../components/SideNav/SideNav";
 
 import { Aldrich } from 'next/font/google';
 import Footer from "@/components/Footer/Footer";
@@ -31,6 +32,7 @@ export default function Home() {
             </>
           )
       }
+      <SideNav />
       <LandingCollage />
 
 
