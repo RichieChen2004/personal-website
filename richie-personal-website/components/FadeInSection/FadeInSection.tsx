@@ -24,7 +24,7 @@ export default function FadeInSection({ children }: { children: React.ReactNode 
   return (
     <div
       ref={ref}
-      className={`transform transition-all duration-1000 ease-in-out ${
+      className={`transform transition-all duration-1000 ease-in-out text-white ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
