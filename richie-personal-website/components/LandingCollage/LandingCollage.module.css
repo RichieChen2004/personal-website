@@ -1,3 +1,4 @@
+/* animation only */
 .fly-in-left {
   animation: flyInLeft 1.5s ease-out 1s forwards;
 }
@@ -28,14 +29,13 @@
   }
 }
 
+/* image hover */
 .hover-scale {
   position: relative;
-  z-index: 10;
+  z-index: 50;
   box-shadow: 0 0 7px rgba(0,0,0,1);
-  transform: translate(0, 0);
   transition: transform 0.3s ease; 
 }
-
 .hover-scale:hover {
   transform: scale(1.1); 
 }
@@ -46,3 +46,14 @@
   top: 50%;
   left: 25%;
 }
+
+/* layout transforms using % */
+.zero       { transform: translate(-50%, -151%); }
+.rightFace  { transform: translate(80%, -118%); }
+.shoulder   { transform: translate(-44%, -2%); z-index: 120 !important;}
+.img1863    { transform: translate(70%, 9%); }
+
+.eye        { transform: translate(-36%, -340%); }
+.n999       { transform: translate(-8%, 18%); z-index: 100 !important;}
+.third      { transform: translate(19%, -195%); }
+.nose       { transform: translate(36%, 190%); }
