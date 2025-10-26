@@ -42,18 +42,24 @@
 
 .origin {
   opacity: 0;
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 5%;
   left: 25%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.origin > * {
+  pointer-events: auto;
 }
 
 /* layout transforms using % */
 .zero       { transform: translate(-50%, -151%); }
 .rightFace  { transform: translate(80%, -118%); }
-.shoulder   { transform: translate(-44%, -2%); z-index: 120 !important;}
+.shoulder   { transform: translate(-44%, -2%); }
 .img1863    { transform: translate(70%, 9%); }
 
 .eye        { transform: translate(-36%, -340%); }
-.n999       { transform: translate(-8%, 18%); z-index: 100 !important;}
+.n999       { transform: translate(-8%, 18%); }
 .third      { transform: translate(19%, -195%); }
 .nose       { transform: translate(36%, 190%); }

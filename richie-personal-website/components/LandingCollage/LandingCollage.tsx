@@ -34,7 +34,7 @@ export default function LandingCollage() {
           </div>
 
           <div className={`${styles['origin']} ${styles['fly-in-left']}`}>
-            <div className={styles.img1863}>
+            <div className={`${styles.img1863}`}>
               <Image src="/dokja/1863th.jpg" alt="1836" width={width} height={height} className={styles['hover-scale']} />
             </div>
           </div>
