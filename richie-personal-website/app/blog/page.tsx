@@ -5,25 +5,15 @@ import { Aldrich } from 'next/font/google';
 
 const aldrich = Aldrich({ subsets: ['latin'], weight: '400' });
 
-export default function AboutPage() {
+export default function BlogPage() {
 
     const blogPosts = [
         {
             title: "I hate the grind",
-            summary: "My thoughts on computer science",
+            summary: "My thoughts on computer science in 2025",
             date: "Wednesday 29 Oct 2025",
+            url: "/blog/i-hate-the-grind",
         }, 
-        {
-            title: "Post 2",
-            summary: "This is the summary of post 2.",
-            date: "2024-06-02",
-        },
-        {
-            title: "Post 3",
-            summary: "This is the summary of post 3.",
-            date: "2024-06-03",
-        },
-        
     ];
 
     return (
@@ -48,6 +38,7 @@ export default function AboutPage() {
                         title={post.title}
                         summary={post.summary}
                         date={post.date}
+                        url={post.url}
                         key={index}
                     />
                     ))
