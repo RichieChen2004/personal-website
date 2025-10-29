@@ -129,9 +129,6 @@ export default function IHateTheGrindPage() {
             <hr className="w-3/4 max-w-3xl border-t border-white/25 my-8" />
 
             <div className={`${aldrich.className} w-3/4 max-w-3xl text-left mb-6 gap-10 flex flex-col`}>
-                <p className="text-sm">
-                    Yet.
-                </p>
 
                 <p className="text-sm">
                     This post is an excerpt of an old video script I had written on <span className="bg-[#fcbe11] text-black px-1 rounded">
