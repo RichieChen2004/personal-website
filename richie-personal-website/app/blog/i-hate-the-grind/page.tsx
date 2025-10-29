@@ -118,11 +118,11 @@ export default function IHateTheGrindPage() {
                 </p>
 
                 <p className="text-sm">
-                    When it came to grinding Leetcode and preparing for technical interviews, I've found that — in my experience — that wall is in fact not flat.
+                    When it came to <span className="italic">grinding</span> Leetcode and preparing for technical interviews, I've found that — in my experience — that wall is in fact not flat.
                 </p>
 
                 <p className="text-sm">
-                    And that, the so-called secrets, turned out to be very obvious patterns that any university student can grasp for themselves  — the once invisible holds littering that wall, now clearly visible, waiting to be climbed.
+                    And that the so-called secrets turned out to be very obvious patterns, that any university student can grasp for themselves — thus <span className="underline">starting their climb</span>.
                 </p>
             </div>
 
