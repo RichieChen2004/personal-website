@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./MusicPlayer.module.css";
 import AudioVisualiser from "./AudioVisualiser";

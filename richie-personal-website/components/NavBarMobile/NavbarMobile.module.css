@@ -1,0 +1,41 @@
+.navbar {
+  opacity: 1;
+  position: fixed;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 30px;
+  background-color: rgba(87, 87, 87, 0.2);
+  z-index: 50;
+  border-radius: 12px;
+  outline: 1px solid hsla(0, 0%, 100%, 0.25);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+  cursor: pointer;
+}
+
+.navbar_directory {
+  color: #ffffff;
+  z-index: 51;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto; 
+  font-size: small;
+  gap: 5px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in 0.2s;
+}
+
+.navbar_directory a {
+  position: relative;
+  padding: 6px 12px;
+  border-radius: 50%; 
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+  z-index: 1; 
+}

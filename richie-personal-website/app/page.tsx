@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Navbar from "../components/NavBar/Navbar";
+import NavbarMobile from "../components/NavBarMobile/NavbarMobile";
 import MusicPlayer from "../components/MusicPlayer/MusicPlayer";
 import LandingCollage from "../components/LandingCollage/LandingCollage";
 import styles from "./page.module.css";
@@ -24,15 +25,14 @@ export default function Home() {
     <main className="flex flex-col items-center justify-start min-h-screen bg-[#171719]">
       
       {
-        isMobile ? null 
+        isMobile ? (
+          null
+        ) 
         : (
-            <>
-              <Navbar /> 
-              <MusicPlayer />
               <SideNav />
-            </>
           )
       }
+      
       <LandingCollage />
 
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Aldrich} from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
+import LayoutWrapper from "@/components/LayoutWrapper/LayoutWrapper";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,6 +33,7 @@ export default function RootLayout({
         {children}
         <SpeedInsights/>
         <Analytics />
+        <LayoutWrapper />
       </body>
     </html>
   );
