@@ -1,9 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Navbar from "../components/NavBar/Navbar";
-import NavbarMobile from "../components/NavBarMobile/NavbarMobile";
-import MusicPlayer from "../components/MusicPlayer/MusicPlayer";
 import LandingCollage from "../components/LandingCollage/LandingCollage";
 import styles from "./page.module.css";
 import FadeInSection from "../components/FadeInSection/FadeInSection";
@@ -32,7 +29,7 @@ export default function Home() {
               <SideNav />
           )
       }
-      
+
       <LandingCollage />
 
 
@@ -100,7 +97,6 @@ export default function Home() {
         </FadeInSection>
       </div>
       
-      <Footer />
     </main>
   );
 }

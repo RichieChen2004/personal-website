@@ -1,3 +1,6 @@
+import { Aldrich } from 'next/font/google';
+
+const aldrich = Aldrich({ subsets: ['latin'], weight: '400' });
 
 export default function BlogContainer(
     {
@@ -14,8 +17,13 @@ export default function BlogContainer(
 
     return (
         <div>
-            <div className="text-white p-4 border border-gray-700 rounded-lg mb-6 hover:bg-gray-800 transition duration-300">
-                <h2 className="text-2xl font-bold mb-2">{title}</h2>
+            <div className={`${aldrich.className} text-white p-4 
+                backdrop-blur-[16px] 
+                outline outline-white/25 rounded-[12px] 
+                mb-6 hover:bg-gray-400/20 transition duration-300 cursor-pointer`}
+            >
+                <p className="text-gray-300 font-bold">{date}</p>
+                <h3 className="text-xl font-bold mt-4 mb-4">{title}</h3>
                 <p className="text-gray-300">{summary}</p>
             </div>
         </div>

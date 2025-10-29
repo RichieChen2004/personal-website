@@ -4,6 +4,7 @@ import { useIsMobile } from "@/util/useIsMobile"
 import Navbar from "../NavBar/Navbar";
 import NavbarMobile from "../NavBarMobile/NavbarMobile";
 import MusicPlayer from "../MusicPlayer/MusicPlayer";
+import Footer from "../Footer/Footer";
 import { useEffect, useState } from "react";
 
 export default function LayoutWrapper() {
@@ -32,6 +33,7 @@ export default function LayoutWrapper() {
                 </>
             )
             }
+            <Footer />
         </>
     )
 }

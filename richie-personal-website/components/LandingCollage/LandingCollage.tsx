@@ -65,12 +65,6 @@ export default function LandingCollage() {
             </div>
           </div>
 
-          <div className={`${styles['origin']} ${styles['fly-in-left']}`}>
-            <div className={styles.n999}>
-              <Image src="/dokja/999.jpg" alt="999" width={width} height={height} className={styles['hover-scale']} />
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
