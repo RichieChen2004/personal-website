@@ -17,7 +17,7 @@ export default function BlogPage() {
     ];
 
     return (
-        <main className="flex flex-col items-center justify-start min-h-screen bg-[#171719]">
+        <main className="text-white flex flex-col items-center justify-start min-h-screen bg-[#171719]">
 
             <img src="/dokkabi-removebg.png" alt="dokkabi" width={200} height={200} className="mt-20 mb-10" />
 
